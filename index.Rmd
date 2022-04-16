@@ -1,10 +1,10 @@
 ---
-title: "<center><div class='mytitle'>Comparing Suicide Rates from 1990 to 2019</div></center>"
+title: "Comparing Suicide Rates"
 author: "<center><div class='mysubtitle'>See the code on [github](https://github.com/Barnes7599/suicide_rates).</div></center>"
 output:
   html_document:
     css: style.css
-    theme: "yeti"
+    theme: yeti
     code_folding: hide
     includes:
       before_body: header.html
@@ -14,9 +14,11 @@ output:
 <div class="mycontent">
 
 <center>
-![]()
+<!-- ![]() -->
+Photo by <a href="https://unsplash.com/@kalvisuals?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">KAL VISUALS</a> on <a href="https://unsplash.com/s/photos/lanscape?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
 <br>
-<!-- Disclaimer: This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with DC 311, or any of its subsidiaries or its affiliates. The official DC 311 website can be found [here](https://311.dc.gov/citizen/home) -->
+Disclaimer: This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Our World in Data, or any of its subsidiaries or its affiliates. The official Our World in Data website can be found [here](https://ourworldindata.org/)
 </center> 
 <br><br>
 
@@ -27,6 +29,7 @@ Give narrative of project
 Lets get started
 
 ```{r setup, include=FALSE}
+
 knitr::opts_chunk$set(
   echo = FALSE,
   message = FALSE,
@@ -56,21 +59,19 @@ library(highcharter)
 ```
 
 ---
+
 <h3> **Load the data** </h3>
 
 Data set is located at:[Dataset](https://ourworldindata.org/suicide#) <br>
-Dataset about page located here:[About](https://opendata.dc.gov/datasets/DCGIS::311-city-service-requests-in-2022/about)
+Dataset about page located here:[About]()
 
 I typically use the [janitor](https://github.com/sfirke/janitor) package whenever I read in a data set. it cleans up the column headings by making them all lower case and placing an underscore between spaces. 
 
 ```{r, echo= TRUE}
 
-service_calls_2022 <- read_csv("https://raw.githubusercontent.com/Barnes7599/DCServiceRequests311/main/DC_service_calls.csv") %>%
-  janitor::clean_names()
+
 ```
 
 
-
----
 
 
